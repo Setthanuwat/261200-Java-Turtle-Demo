@@ -2201,25 +2201,367 @@ public class Turtle implements Runnable, ActionListener, MouseListener, MouseMot
      */
     public static void main(String[] a)
     {
-        //Turtle bob = new Turtle();
-        /*for(int i=0;i<360;i++)
+        
+        Turtle eye =new Turtle(35   ,-10 );
+        Turtle eye1 =new Turtle(30   ,5 );
+        Turtle eye2 =new Turtle(-0   ,5 );
+        Turtle N =new Turtle(20   ,-9 );
+        Turtle M =new Turtle(20   ,-130 );
+        Turtle M1 =new Turtle(20   ,-130 );
+        Turtle A =new Turtle(20   ,-130 );
+        Turtle Head1 =new Turtle(20   ,-220 );
+        Turtle Head2 =new Turtle(20   ,-220 );
+        Turtle k = new Turtle(130,-170);
+        Turtle s1 = new Turtle(-15,-70);
+        Turtle s2 = new Turtle(-15,-55);
+        Turtle s3 = new Turtle(-15,-40);
+        Turtle s4 = new Turtle(55,-70);
+        Turtle s5 = new Turtle(55,-55);
+        Turtle s6 = new Turtle(55,-40);
+        Turtle D = new Turtle(20,-205);
+        Turtle Head3 =new Turtle(110,-170 );
+        Turtle Head4 =new Turtle(-110   ,-170 );
+
+        M1.left(180);
+        Turtle bob = new Turtle(0,-10);
+        eye.speed(0.15);
+        N.speed(0.15);
+
+        for(int i=1; i < 10;i++)
+            {
+            
+            eye.penColor("black");
+            eye.forward(3);
+            eye.left(i+5);
+            bob.penColor("black");
+            bob.forward(3);
+            bob.left(i+5);
+            }
+            bob.forward(7);
+            eye.forward(7);
+            for(int i=1; i < 10;i++)
+            {
+            
+            eye.penColor("black");
+            eye.forward(3);
+            eye.left(i+5);
+            bob.penColor("black");
+            bob.forward(3);
+            bob.left(i+5);
+            }
+
+            for(int i=1; i < 10;i++)
+            {
+            
+            eye.penColor("black");
+            eye.forward(3);
+            eye.left(i+5);
+            bob.penColor("black");
+            bob.forward(3);
+            bob.left(i+5);
+            }
+            bob.forward(7);
+            eye.forward(7);
+            for(int i=1; i < 10;i++)
+            {
+            
+            eye.penColor("black");
+            eye.forward(3);
+            eye.left(i+5);
+            bob.penColor("black");
+            bob.forward(3);
+            bob.left(i+5);
+            }
+                eye1.speed(0.15);
+                eye2.speed(0.15);
+            for(int i=90; i < 120;i++){
+                eye1.penColor("black");
+                
+                eye1.forward(5);
+                eye1.right(i+1);
+                eye2.penColor("black");
+                
+                eye2.forward(5);
+                eye2.right(i+1);
+            }
+
+            s1.left(200);
+            s1.forward(70);
+            s2.left(160);
+            s2.forward(70);
+            s3.left(120);
+            s3.forward(70);
+            s4.left(340);
+            s4.forward(70);
+            s5.left(20 );
+            s5.forward(70);
+            s6.left(60);
+            s6.forward(70);
+
+            for(int i=1; i < 12;i++){
+               
+                M.left(5);
+                M.forward(10);
+                
+            }
+            for(int i=1; i < 12;i++){
+               
+                M1.right(5);
+                M1.forward(10);
+                
+            }
+
+            for(int i=1; i < 12;i++){
+                N.penColor("red");
+                
+                N.forward(2);
+                N.right(i+3);
+                
+            }
+            for(int i=1; i < 12;i++){
+                N.penColor("red");
+                
+                N.forward(2);
+                N.right(i+3);
+                
+            }
+            for(int i=1; i < 12;i++){
+                N.penColor("red");
+                
+                N.forward(2);
+                N.right(i+3);
+                
+            }
+            for(int i=1; i < 12;i++){
+                N.penColor("red");
+                
+                N.forward(2);
+                N.right(i+3);
+                
+            }
+
+            A.left(90);
+            A.forward(95);
+
+        
+        for(int i=1; i < 45;i++){
+            if(i<=12){
+                Head1.penColor("white");
+            }
+            else{
+            Head1.penColor("blue");}
+             Head1.left(4);
+                    Head1.forward(10);
+                    
+               }
+               Head2.left(180);
+               for(int i=1; i < 46;i++){
+                if(i<=12){
+                    Head2.penColor("white");
+                }
+                else{
+                Head2.penColor("blue");}
+                 Head2.right(4);
+                        Head2.forward(10);
+                        
+                   }
+                   Head3.setDirection(45);
+                   for(int i=1; i < 39;i++){
+                    Head3.penColor("blue");
+                     Head3.left(7);
+                     if(i==38){
+                            Head3.forward(9);
+                        }
+                            else{Head3.forward(15);}
+                       }
+                    //    for(int i=1; i < 46;i++){
+                    //     Head4.penColor("blue");
+                    //      Head4.left(4+0.1*i);
+                    //             Head4.forward(10);
+                                
+                    //        }
+                   k.penColor("red");
+                   k.left(180);
+                   k.forward(230);
+
+                   for(int i=1; i < 16;i++){
+                    k.penColor("red");
+                     k.left(12);
+                            k.forward(2.5);
+                            
+                       }
+                       k.forward(240);
+                       for(int i=1; i < 16;i++){
+                        k.penColor("red");
+                         k.left(12);
+                                k.forward(2.5);
+
+                       }
+                       k.forward(8);
+
+                        D.speed(0.2);
+                       for(int i=1; i < 38;i++){
+                        D.penColor("yellow");
+                         D.left(10);
+                                D.forward(2.5);
+
+                       }
+                       for(int i=1; i < 38;i++){
+                        D.penColor("yellow");
+                         D.left(10+0.8);
+                                D.forward(2.5);
+
+                       }
+                       for(int i=1; i < 38;i++){
+                        D.penColor("yellow");
+                         D.left(10+1.6);
+                                D.forward(2.5);
+
+                       }
+                       for(int i=1; i < 38;i++){
+                        D.penColor("yellow");
+                         D.left(10+2.4);
+                                D.forward(2.5);
+
+                       }
+                       for(int i=1; i < 38;i++){
+                        D.penColor("yellow");
+                         D.left(10+3.2);
+                                D.forward(2.5);
+
+                       }
+                       for(int i=1; i < 38;i++){
+                        D.penColor("yellow");
+                         D.left(10+4);
+                                D.forward(2.5);
+
+                       }
+
+                       for(int i=1; i < 38;i++){
+                        D.penColor("yellow");
+                         D.left(10+4.8);
+                                D.forward(2.5);
+
+                       }
+
+                       for(int i=1; i < 38;i++){
+                        D.penColor("yellow");
+                         D.left(10+5.6);
+                                D.forward(2.5);
+
+                       }
+
+                       for(int i=1; i < 38;i++){
+                        D.penColor("yellow");
+                         D.left(10+6.4);
+                                D.forward(2.5);
+
+                       }
+
+                       for(int i=1; i < 38;i++){
+                        D.penColor("yellow");
+                         D.left(10+7.2);
+                                D.forward(2.5);
+
+                       }
+
+                       for(int i=1; i < 38;i++){
+                        D.penColor("yellow");
+                         D.left(10+8);
+                                D.forward(2.5);
+
+                       }
+
+                       for(int i=1; i < 38;i++){
+                        D.penColor("yellow");
+                         D.left(10+8.8);
+                                D.forward(2.5);
+
+                       }
+
+                       for(int i=1; i < 38;i++){
+                        D.penColor("yellow");
+                         D.left(10+9.6);
+                                D.forward(2.5);
+
+                       }
+
+                       for(int i=1; i < 38;i++){
+                        D.penColor("yellow");
+                         D.left(10+10.4);
+                                D.forward(2.5);
+
+                       }
+
+                       for(int i=1; i < 38;i++){
+                        D.penColor("yellow");
+                         D.left(10+11.2);
+                                D.forward(2.5);
+
+                       }
+
+                       for(int i=1; i < 38;i++){
+                        D.penColor("yellow");
+                         D.left(10+12);
+                                D.forward(2.5);
+
+                       }
+
+                       for(int i=1; i < 38;i++){
+                        D.penColor("yellow");
+                         D.left(10+12.8);
+                                D.forward(2.5);
+
+                       }
+
+                       for(int i=1; i < 38;i++){
+                        D.penColor("yellow");
+                         D.left(10+13.6);
+                                D.forward(2.5);
+
+                       }
+
+                       for(int i=1; i < 38;i++){
+                        D.penColor("yellow");
+                         D.left(24.4+i);
+                                D.forward(2.5);
+
+                       }
+
+                       for(int i=1; i < 38;i++){
+                        D.penColor("black");
+                         D.left(26+i);
+                                D.forward(2.5);
+
+                       }
+
+                       
+                       for(int i=1; i < 42;i++){
+                        D.penColor("black");
+                         D.left(30+i);
+                                D.forward(2.5);
+
+                       }
+        
+
+
         {
-            bob.forward(i*1.25);
-            bob.left(90.25);
+           
+            clearStorage();
         }
-         */
+        
         /*If you don't know what a for loop is yet this is equivalent to repeating the middle 4 lines 5 times in a row.*/
-        Turtle bob = new Turtle();
-        bgcolor("lightblue");
-        bob.penColor("red");
-        bob.width(10);
-        for(int i=0;i<200;i++)
-        {
-            bob.forward(i/10.);
-            bob.left(5);
-            if(i%10==0)bob.dot("orange");//Draws dots when i is a multiple of 10.
-        }
-        bob.saveGCODE("test.gcode");
+        //Turtle bob = new Turtle();
+       // bgcolor("lightblue");
+      //  bob.penColor("red");
+      //  bob.width(10);
+     //   for(int i=0;i<200;i++)
+      //  {
+     //       bob.forward(i/10.);
+     //       bob.left(5);
+     //       if(i%10==0)bob.dot("orange");//Draws dots when i is a multiple of 10.
+    //    }
+     //   bob.saveGCODE("test.gcode");
     }
 
     /**
