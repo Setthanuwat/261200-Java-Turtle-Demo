@@ -1,1 +1,1 @@
-clearStorage();
+ArrayList

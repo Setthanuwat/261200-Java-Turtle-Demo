@@ -2194,14 +2194,21 @@ public class Turtle implements Runnable, ActionListener, MouseListener, MouseMot
         }
     }
 
-public static class Doraemon{
-    public void Doraemon(){}
 
+// public static class Doraemon {
+//     public void Doraemon(){}
 
-public void Head(){
+public static class Head implements Runnable{
+    
+   @Override
+public void run(){
             Turtle Head1 =new Turtle(20   ,-220 );
             Turtle Head2 =new Turtle(20   ,-220 );
             Turtle Head3 =new Turtle(110,-170 );
+
+            Head1.speed(0.02);
+            Head2.speed(0.02);
+            Head3.speed(0.02);
 
             for(int i=1; i < 45;i++){
                 if(i<=12){
@@ -2235,8 +2242,11 @@ public void Head(){
                            }
                            
         }
+    }
 
-        public void Eye(){
+    public static class Eye implements Runnable{
+        @Override
+        public void run(){
 
             Turtle eye =new Turtle(35   ,-10 );
             Turtle bob = new Turtle(0,-10);
@@ -2289,7 +2299,10 @@ public void Head(){
             }
             
         }
-        public void EyeIn(){
+    }
+        public static class EyeIn implements Runnable{
+            @Override
+            public void run(){
             Turtle eye1 =new Turtle(30   ,5 );
         Turtle eye2 =new Turtle(-0   ,5 );
 
@@ -2307,7 +2320,11 @@ public void Head(){
             }
             
         }
-        public void Moustache(){
+    }
+
+public static class Moustache implements Runnable{
+    @Override
+    public void run(){
             Turtle s1 = new Turtle(-15,-70);
             Turtle s2 = new Turtle(-15,-55);
             Turtle s3 = new Turtle(-15,-40);
@@ -2331,7 +2348,10 @@ public void Head(){
             
 
         }
-        public void Nose(){
+    }
+    public static class Nose implements Runnable{
+        @Override
+        public void run(){
             Turtle N =new Turtle(20   ,-9 );
             N.speed(0.15);
             for(int i=1; i < 12;i++){
@@ -2365,7 +2385,10 @@ public void Head(){
             
 
         }
-        public void Mouth(){
+    }
+    public static class Mouth implements Runnable{
+        @Override
+        public void run(){
             Turtle M =new Turtle(20   ,-130 );
         Turtle M1 =new Turtle(20   ,-130 );
         Turtle A =new Turtle(20   ,-130 );
@@ -2386,10 +2409,12 @@ public void Head(){
         A.left(90);
         A.forward(95);
         
-
-
         }
-        public void Collar(){
+    }
+
+       public static class Collar implements Runnable{
+        @Override
+public void run(){
             Turtle k = new Turtle(130,-170);
                 
             k.penColor("red");
@@ -2412,7 +2437,10 @@ public void Head(){
                 k.forward(8);
                 
         }
-        public void Ring(){
+    }
+    public static class Ring implements Runnable{
+        @Override
+        public void run(){
             Turtle D = new Turtle(20,-205);
 
             D.speed(0.2);
@@ -2561,18 +2589,19 @@ public void Head(){
                        
         
 
-        }
-    public void paint(){
-            this.Head();
-            this.Eye();
-            this.EyeIn();
-            this.Moustache();
-            this.Mouth();
-            this.Collar();
-            this.Nose();
-            this.Ring();
-    }
-}
+         }
+     }
+    // public void paint(){
+    //         this.Head();
+    //         this.Eye();
+    //         this.EyeIn();
+    //         this.Moustache();
+    //         this.Mouth();
+    //         this.Collar();
+    //         this.Nose();
+    //         this.Ring();
+    // }
+// }
     // public static class Head{
 
     
@@ -2974,10 +3003,27 @@ public void Head(){
     
      public static void main(String[] a)
     {
+        
+        Thread td1 = new Thread(new Head());
+        Thread td2 = new Thread(new Eye());
+        Thread td3 = new Thread(new EyeIn());
+        Thread td4 = new Thread(new Moustache());
+        Thread td5 = new Thread(new Mouth());
+        Thread td6 = new Thread(new Ring());
+        Thread td7 = new Thread(new Collar());
+        Thread td8 = new Thread(new Nose());
+            td1.start();
+            td2.start();
+            td3.start();
+            td4.start();
+            td5.start();
+            td6.start();
+            td7.start();
+            td8.start();
 
-        Doraemon doraemon = new Doraemon();
+        // doraemon.paint();
 
-        doraemon.paint();
+
         //  Head head = new Head();
         //  Eye eye = new Eye();
         //  EyeIn eyein = new EyeIn();
@@ -3334,10 +3380,10 @@ public void Head(){
 
 
         {
-            clearStorage();
+             clearStorage();
             
         }
-        clearStorage();
+        // clearStorage();
 
         /*If you don't know what a for loop is yet this is equivalent to repeating the middle 4 lines 5 times in a row.*/
         //Turtle bob = new Turtle();
@@ -3785,5 +3831,10 @@ public void Head(){
 
 
     }
-}
+//     @Override
+//     public void run() {
+//         // TODO Auto-generated method stub
+//         throw new UnsupportedOperationException("Unimplemented method 'run'");
+//     }
+ }
 
